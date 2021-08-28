@@ -25,3 +25,9 @@ ADD Gender varchar(2)
 Update employee_payroll set Gender='M' 
 WHERE Name='Bills' OR Name='sai'
 
+Alter Table employee_payroll
+Alter Column Salary money
+
+select SUM(Salary) as TotalSalary, AVG(Salary) as AverageSalary, MIN(Salary) as MinimumSalary, 
+	   MAX(Salary) as MaximumSalary, COUNT(*) as TotalEmployee
+From employee_payroll WHERE Gender='M' Group By Gender 
