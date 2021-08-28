@@ -19,6 +19,9 @@ SELECT *
 FROM employee_payroll
 WHERE Name='Bills' AND StartDate BETWEEN CAST('2010-01-01' AS DATE ) AND GETDATE();
 
+Alter Table employee_payroll 
+ADD Gender varchar(2)
 
-
+Update employee_payroll set Gender='M' 
+WHERE Name='Bills' OR Name='sai'
 
