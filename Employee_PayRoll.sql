@@ -31,3 +31,8 @@ Alter Column Salary money
 select SUM(Salary) as TotalSalary, AVG(Salary) as AverageSalary, MIN(Salary) as MinimumSalary, 
 	   MAX(Salary) as MaximumSalary, COUNT(*) as TotalEmployee
 From employee_payroll WHERE Gender='M' Group By Gender 
+
+select SUM(Salary) as TotalSalary, AVG(Salary) as AverageSalary, MIN(Salary) as MinimumSalary, 
+	   MAX(Salary) as MaximumSalary, COUNT(*) as TotalEmployee
+From employee_payroll WHERE Gender='F' Group By Gender 
+
