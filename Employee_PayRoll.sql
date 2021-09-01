@@ -120,6 +120,23 @@ Select * From Employee
 
 Select * From Company
 
+/* Ensure all the retrive queries */
+
+-- UC4 Validation
+SELECT * FROM employee_payroll
+-- UC5 Validation
+SELECT *FROM employee_payroll
+WHERE Name='Bills' AND StartDate BETWEEN CAST('2010-01-01' AS DATE ) AND GETDATE();
+-- UC7 Validation
+Select SUM(NetPay) as Salary, AVG(NetPay) as AverageSalary, MIN(NetPay) as MinimumSalary, 
+	   MAX(NetPay) as MaximumSalary, COUNT(*) as TotalEmployee
+FROM employee_payroll WHERE Gender='M' GROUP BY Gender 
+
+Select SUM(NetPay) AS Salary, AVG(NetPay) AS AverageSalary, MIN(NetPay) AS MinimumSalary, 
+	   MAX(NetPay) AS MaximumSalary, COUNT(*) AS TotalEmployee
+FROM employee_payroll
+WHERE Gender='F' GROUP BY Gender 
+
 
 
 
