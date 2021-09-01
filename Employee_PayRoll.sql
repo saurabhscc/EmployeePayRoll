@@ -51,6 +51,14 @@ Where Name='Bills'
 Update employee_payroll set department='Account'
 Where Name='sai'
 
+Alter Table employee_payroll 
+Drop Column Salary
+
+Alter Table employee_payroll
+Add BasicPay int, Deduction float, TaxablePay float, Tax float, NetPay float
+
+
+
 
 
 
