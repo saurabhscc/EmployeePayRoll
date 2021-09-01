@@ -40,4 +40,17 @@ Alter Table employee_payroll
 
 ADD phone_number varchar(12), address varchar(50) Default ('US'), department varchar (50) NOT NULL Default ('Engineering');
 
+Update employee_payroll set phone_number='9191919100'
+Where Name='shree'
+Update employee_payroll set phone_number='9191919111'
+Where Name='Bills'
+Update employee_payroll set phone_number='9191919122'
+Where Name='sai'
+Update employee_payroll set department='Operation'
+Where Name='Bills'
+Update employee_payroll set department='Account'
+Where Name='sai'
+
+
+
 
