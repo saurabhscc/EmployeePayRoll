@@ -58,6 +58,17 @@ Alter Table employee_payroll
 Add BasicPay int, Deduction float, TaxablePay float, Tax float, NetPay float
 
 
+Insert Into employee_payroll(Name, Gender, StartDate, phone_number, address, department, BasicPay, Deduction, TaxablePay, Tax, NetPay ) 
+							Values('Terissa','F','2010-01-01','7987210210','India','Sales',40000,4000.0,1500.0,500.0,34000.0)
+
+Insert Into employee_payroll(Name, Gender, StartDate, phone_number, address, department, BasicPay, Deduction, TaxablePay, Tax, NetPay ) 
+							Values('Terissa','F','2010-01-01','7987210210','India','Marketing',40000,4000.0,1500.0,500.0,34000.0)
+
+select * from employee_payroll
+WHERE Name='Terissa';
+
+
+
 
 
 
