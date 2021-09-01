@@ -36,3 +36,8 @@ select SUM(Salary) as TotalSalary, AVG(Salary) as AverageSalary, MIN(Salary) as 
 	   MAX(Salary) as MaximumSalary, COUNT(*) as TotalEmployee
 From employee_payroll WHERE Gender='F' Group By Gender 
 
+Alter Table employee_payroll 
+
+ADD phone_number varchar(12), address varchar(50) Default ('US'), department varchar (50) NOT NULL Default ('Engineering');
+
+
