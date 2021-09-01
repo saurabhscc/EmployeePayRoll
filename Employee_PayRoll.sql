@@ -68,6 +68,57 @@ select * from employee_payroll
 WHERE Name='Terissa';
 
 
+/* Represents the ER Diagram */
+Create Table Employee 
+(
+ Emp_Id int identity (1,1) primary key,
+ Emp_Name varchar(30),
+ Gender Char(1),
+ PhoneNumber varchar(12),
+ Address varchar(50),
+ City varchar(15),
+ State varchar(12),
+ Start date
+)
+
+Create Table Company
+(
+  Company_Id int identity (1,1) primary key,
+  Company_Name varchar(40),
+  Emp_Id int Foreign Key References Employee(Emp_Id)
+)
+
+Create Table Department
+(
+  Dept_Id int identity (1,1) primary key,
+  Dept_Name varchar(15),
+  Emp_Id int Foreign Key References Employee(Emp_Id)
+)
+
+Create Table PayRoll
+(
+  BasicPay int, 
+  Deduction float, 
+  TaxablePay float, 
+  Tax float,
+  NetPay float,
+  Emp_Id int Foreign Key References Employee(Emp_Id)
+)
+
+/* Insert data into Employee */
+Insert Into Employee Values('shree','M','9191919100','Hinjawadi','Pune','Maharashtra','2016-01-01')
+Insert Into Employee Values('Ketan','M','8989898900','Kunj','Solan','HP','2020-02-05')
+Insert Into Employee Values('Chetan','M','7878787878','SMRoad','Vadodara','Gujarat','2021-08-19')
+
+/* Insert data into Company */
+Insert Into Company Values ('Infosys',1)
+Insert Into Company Values ('Infosys',3)
+Insert Into Company Values ('Capgemeni',2)
+
+-- Retrieve the data from tables
+Select * From Employee
+
+Select * From Company
 
 
 
